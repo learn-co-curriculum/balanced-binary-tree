@@ -60,13 +60,12 @@ list = [1, 2, 3]
     1     3
 */
 
-function one_to_three_bst() {
+function one_to_three_bst():
   left = new Node(1)
   right = new Node(3)
   root = new Node(2, left, right)
 
   return root
-}
 ```
 
 Use the language of your choosing. We've included starter files for some languages where you can optionally pseudocode, explain your solution and code.
