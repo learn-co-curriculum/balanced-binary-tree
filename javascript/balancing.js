@@ -1,19 +1,30 @@
-function methodName(arg) {
-  // type your code here
+class Node {
+  constructor(value, left = null, right = null) {
+    this.value = value;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+// list = [3, 5, 6, 9, 10, 20]
+function threeToTwenty() {
+
+}
+
+// list = [10, 11, 30, 100, 200]
+function tenToTwoHundred() {
+
 }
 
 if (require.main === module) {
-  // add your own tests in here
-  console.log("Expecting: 3");
-  console.log(methodName([2, 1, 3, 3, 2]));
-
-  console.log("");
-
-  console.log("Expecting: -1");
-  console.log(methodName([1, 2, 3, 4]));
+  // add tests in here if you need them
 }
 
-module.exports = methodName;
+module.exports = {
+  Node,
+  threeToTwenty,
+  tenToTwoHundred
+};
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution

@@ -41,7 +41,7 @@ For the left tree, which is balanced, we can do the following:
 * Is 12 more less than 16? It's less!
 * Go right, to 16! found it.
 
-Notice that we didn't have to visit the left subtree at all, which means this algorithm would have a Big O run time of less than O(n)! We'll let you think about what the specific run time might be :) Or Google it.
+Notice that we didn't have to visit the left subtree at all, which means this algorithm would have a Big O run time of less than O(n)! We'll let you think about what the specific run time might be :) Or Google it. Or if you're familiar with the binary search algorithm, does this remind you of that? (Shh, writer, you're giving the answer away!)
 
 For the right tree, which is unabalanced, we have to visit every single node before we get to 16. This has a Big O run time of O(n), which is not as good as the balanced tree.
 
@@ -49,7 +49,7 @@ So why do we want to aim for balanced trees!? All together now: To save time! (<
 
 ## Practice Building Balanced Trees Manually
 
-For practice, let's manually build balanced trees from lists. We'll include several methods in the starter files which you'll fill out. For each method, return the root node. Our tests will then check if the tree is balanced or unbalanced. Remember, a tree is balanced if the left and right subtrees have a height difference of 0 or 1.
+For practice, let's manually build balanced trees from lists. We'll include several methods in the starter files which you'll fill out. For each method, return the root node. Our tests will then check if the tree is balanced or unbalanced, and if it's a valid BST. Remember, a tree is balanced if the left and right subtrees have a height difference of 0 or 1. Note that there may be more than one way to create a balanced BST from the lists.
 
 Example:
 
