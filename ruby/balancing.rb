@@ -9,12 +9,12 @@ class Node
 end
 
 # list = [3, 5, 6, 9, 10, 20]
-def threeToTwenty
+def three_to_twenty
 
 end
 
 # list = [10, 11, 30, 100, 200]
-def tenToTwoHundred
+def ten_to_two_hundred
 
 end
 

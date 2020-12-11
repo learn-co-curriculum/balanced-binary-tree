@@ -12,7 +12,7 @@ end
 #           6
 #       5       10
 #     3       9   20
-def threeToTwenty
+def three_to_twenty
   three = Node.new(3)
   five = Node.new(5, three)
   nine = Node.new(9)
@@ -26,7 +26,7 @@ end
 #           30
 #       11    100
 #     10        200
-def tenToTwoHundred
+def ten_to_two_hundred
   ten = Node.new(10)
   eleven = Node.new(11, ten)
   two_hundred = Node.new(200)
