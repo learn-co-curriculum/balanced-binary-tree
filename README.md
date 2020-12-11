@@ -38,7 +38,7 @@ For the left tree, which is balanced, we can do the following:
 * Go to 10. 
 * Is 10 more or less than 16? It's less!
 * Go right, to 12. 
-* Is 12 more less than 16? It's less!
+* Is 12 more or less than 16? It's less!
 * Go right, to 16! found it.
 
 Notice that we didn't have to visit the left subtree at all, which means this algorithm would have a Big O run time of less than O(n)! We'll let you think about what the specific run time might be :) Or Google it. Or if you're familiar with the binary search algorithm, does this remind you of that? (Shh, writer, you're giving the answer away!)
