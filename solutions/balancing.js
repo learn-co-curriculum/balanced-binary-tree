@@ -28,7 +28,7 @@ function tenToTwoHundred() {
   const ten = new Node(10);
   const eleven = new Node(11, ten);
   const two_hundred = new Node(200);
-  const hundred = new Node(100, nil, two_hundred);
+  const hundred = new Node(100, null, two_hundred);
 
   return new Node(30, eleven, hundred);
 }
