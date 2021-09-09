@@ -1,24 +1,43 @@
 # Day 5: Balanced and Unbalanced Binary Trees
 
-**Fork and then clone me!**
+## Learning Goals
+
+- Explain the difference between balanced and unbalanced binary search trees
+- Build a balanced binary search tree
+
+## Introduction
 
 ![Balanced and unbalanced tree](https://curriculum-content.s3.amazonaws.com/data-structures-and-algorithms/balanced-binary-tree/valid_trees.png)
 
-Binary trees can be balanced or unbalanced. In the image above, the left tree is balanced, while the right tree is unbalanced. For the left tree, the left subtree is the same height as the right subtree, making it balanced. For the right tree, there is only a right subtree, making it unbalanced.
+Binary trees can be balanced or unbalanced. In the image above, the left tree is
+balanced, while the right tree is unbalanced. For the left tree, the left
+subtree is the same height as the right subtree, making it balanced. For the
+right tree, there is only a right subtree, making it unbalanced.
 
 ## How to Calculate the Height of a Tree
 
-We can look at a visualization of a tree and intuitively determine whether its left and right subtrees are the same height, much the same way as we determine whether two people are the same height. But, when it comes to trees, we actually have a more specific definition of height and it can be measured numerically, just like your own height!
+We can look at a visualization of a tree and intuitively determine whether its
+left and right subtrees are the same height, much the same way as we determine
+whether two people are the same height. But, when it comes to trees, we actually
+have a more specific definition of height and it can be measured numerically,
+just like your own height!
 
 ![Tree height](https://curriculum-content.s3.amazonaws.com/data-structures-and-algorithms/balanced-binary-tree/tree_height.png)
 
-For a binary tree, the height is defined as the distance from the root node (where the tree starts) to the furthest leaf node (a node without any children). To calculate the height we count up the layers (or depth) of nodes (not all of the nodes), and then subtract 1, since we aren't supposed to include the root node in the height. This means that the height for both trees in the image at the top of this reading is 2.
+For a binary tree, the height is defined as the distance from the root node
+(where the tree starts) to the furthest leaf node (a node without any children).
+To calculate the height we count up the layers (or depth) of nodes (not all of
+the nodes), and then subtract 1, since we aren't supposed to include the root
+node in the height. This means that the height for both trees in the image at
+the top of this reading is 2.
 
 ## How to Determine If a Tree Is Balanced or Unbalanced
 
-A tree is considered balanced if its right subtree and left subtree are the same height or they have a difference of 1. All other trees are unbalanced. Here are two examples of balanced trees:
+A tree is considered balanced if its right subtree and left subtree are the same
+height or they have a difference of 1. All other trees are unbalanced. Here are
+two examples of balanced trees:
 
-```
+```txt
     0             10
    / \           /  \
 -10   20        0    20
@@ -26,13 +45,19 @@ A tree is considered balanced if its right subtree and left subtree are the same
                    19
 ```
 
-Visually, it is quite easy to determine whether a tree is balanced or not. We look at the left and right sides and can almost immediately tell that they're the same, or roughly the same, height. In code, however, we have to traverse the left subtree and determine its depth, and then traverse the right subtree and determine its depth. Lastly, we compare those depths. We won't be coding this today, but we will be revisiting this in a later challenge.
+Visually, it is quite easy to determine whether a tree is balanced or not. We
+look at the left and right sides and can almost immediately tell that they're
+the same, or roughly the same, height. In code, however, we have to traverse the
+left subtree and determine its depth, and then traverse the right subtree and
+determine its depth. Lastly, we compare those depths. We won't be coding this
+today, but we will be revisiting this in a later challenge.
 
 ## Why Should We Balance a Tree?
 
 ![Two trees to compare](https://curriculum-content.s3.amazonaws.com/data-structures-and-algorithms/balanced-binary-tree/tree_compare.png)
 
-Take a look at the two trees above. Let's imagine that we want to see if the value 16 is in these trees.
+Take a look at the two trees above. Let's imagine that we want to see if the
+value 16 is in these trees.
 
 For the left tree, which is balanced, we can do the following:
 
@@ -42,19 +67,29 @@ For the left tree, which is balanced, we can do the following:
 - Is 12 more or less than 16? It's less!
 - Go right, to 16! found it.
 
-Notice that we didn't have to visit the left subtree at all, which means this algorithm would have a Big O run time of less than O(n)! We'll let you think about what the specific run time might be :) Or Google it. Or if you're familiar with the binary search algorithm, does this remind you of that? (Shh, writer, you're giving the answer away!)
+Notice that we didn't have to visit the left subtree at all, which means this
+algorithm would have a Big O run time of less than O(n)! Think about what the
+specific run time might be, or Google it. (Hint: does this remind you the binary
+search algorithm?)
 
-For the right tree, which is unbalanced, we have to visit every single node before we get to 16. This has a Big O run time of O(n), which is not as good as the balanced tree.
+For the right tree, which is unbalanced, we have to visit every single node
+before we get to 16. This has a Big O run time of O(n), which is not as good as
+the balanced tree.
 
-So why do we want to aim for balanced trees!? All together now: To save time! (<- You can scream it in your head if you want, or out loud. You do you.)
+So why do we want to aim for balanced trees? To save time!
 
 ## Practice Building Balanced Trees Manually
 
-For practice, let's manually build balanced trees from lists. We'll include several methods in the starter files which you'll fill out. For each method, return the root node. Our tests will then check if the tree is balanced or unbalanced, and if it's a valid BST. Remember, a tree is balanced if the left and right subtrees have a height difference of 0 or 1. Note that there may be more than one way to create a balanced BST from the lists.
+For practice, let's manually build balanced trees from lists. We'll include
+several methods in the starter files which you'll fill out. For each method,
+return the root node. Our tests will then check if the tree is balanced or
+unbalanced, and if it's a valid BST. Remember, a tree is balanced if the left
+and right subtrees have a height difference of 0 or 1. Note that there may be
+more than one way to create a balanced BST from the lists.
 
 Example:
 
-```
+```txt
 list = [1, 2, 3]
 /* i want my tree to look like this:
        2
@@ -69,9 +104,10 @@ function one_to_three_bst():
   return root
 ```
 
-Use the language of your choosing. We've included starter files for some languages where you can optionally pseudocode, explain your solution and code.
+Use the language of your choosing. We've included starter files for some
+languages where you can optionally pseudocode, explain your solution and code.
 
-## Before you start coding:
+## Before you start coding
 
 1. Rewrite the problem in your own words
 2. Validate that you understand the problem
